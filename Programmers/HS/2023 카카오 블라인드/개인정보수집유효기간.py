@@ -6,17 +6,6 @@ M = 12
 D = 28
 
 
-# 날짜를 일수로 변환하는 함수
-def date2days(date: str) -> int:
-    year, month, day = map(int, date.split('.'))
-    return year * M * D + (month - 1) * D + (day - 1)
-
-
-# 달수를 일수로 변환하는 함수
-def month2days(month: str) -> int:
-    return int(month) * D
-
-
 def solution(today, terms, privacies):
     answer = []
 
@@ -44,3 +33,14 @@ def solution(today, terms, privacies):
             answer.append(i)
 
     return answer
+
+
+# 날짜를 일수로 변환하는 함수
+def date2days(date: str) -> int:
+    year, month, day = map(int, date.split('.'))
+    return year * M * D + (month - 1) * D + (day - 1)
+
+
+# 달수를 일수로 변환하는 함수
+def month2days(month: str) -> int:
+    return int(month) * D
